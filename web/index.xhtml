@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Álvaro Gómez</title>
+    </h:head>
+    <h:body>
+        <p:panel id="pnlFactorial"
+                 header="Cálculo del Factorial"
+                 style="width: 400px"
+                 footer="EscuelaDeMinas - PV" >
+            <h:form id="FRMfactorial">
+                <h:panelGrid id="TBLfactorial" columns="2">
+                    <p:outputLabel id="LBLNumero" value="Ingrese un número"/>
+                    <p:inputText id="TXTNumero" value="#{factorialFormBean.n}" />
+                    <p:commandButton id="BTNCalcular" value="Calcular" update="LBLValorFactorial" />
+                    <p:outputLabel id="LBLValorFactorial" value="n!: #{factorialFormBean.calcularFactorial()}" />
+                </h:panelGrid>
+            </h:form>
+        </p:panel>
+                 
+    </h:body>
+    <h:body>
+        <p:panel id="pnlSumatoria"
+                 header="Cálculo del Sumatoria"
+                 style="width: 400px"
+                 footer="EscuelaDeMinas - PV" >
+            <h:form id="FRMsumatoria">
+                <h:panelGrid id="TBLsumatoria" columns="2">
+                    <p:outputLabel id="LBLNumero" value="Ingrese un número"/>
+                    <p:inputText id="TXTNumero" value="#{sumatoriaFormBean.n}" />
+                    <p:commandButton id="BTNCalcular" value="Calcular" update="LBLValorSumatoria" />
+                    <p:outputLabel id="LBLValorSumatoria" value="Resultado: #{sumatoriaFormBean.calcularSumatoria()}" />
+                </h:panelGrid>
+            </h:form>
+        </p:panel>
+                 
+    </h:body>
+    <h:body>
+        <p:panel id="pnlProductoria"
+                 header="Cálculo del Productoria"
+                 style="width: 400px"
+                 footer="EscuelaDeMinas - PV" >
+            <h:form id="FRMproductoria">
+                <h:panelGrid id="TBLproductoria" columns="2">
+                    <p:outputLabel id="LBLNumero1" value="Ingrese el inicio:"/>
+                    <p:inputText id="TXTNumero1" value="#{productoriaFormBean.n1}" />
+                    <p:outputLabel id="LBLNumero2" value="Ingrese el final:" />
+                    <p:inputText id="TXTNumero2" value="#{productoriaFormBean.n2}" />
+                    <p:commandButton id="BTNCalcular" value="Calcular" update="LBLValorProductoria" />
+                    <p:outputLabel id="LBLValorProductoria" value="Resultado: #{productoriaFormBean.calcularProductoria()}" />
+                </h:panelGrid>
+            </h:form>
+        </p:panel>
+                 
+    </h:body>
+</html>
+
